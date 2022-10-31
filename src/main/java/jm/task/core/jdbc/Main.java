@@ -19,11 +19,11 @@ public class Main {
         user.saveUser("Илья", "Житов", (byte) 53);
         user.saveUser("Рулон", "Обоев", (byte) 61);
         user.removeUserById(3);
-//        for (User allUser : user.getAllUsers()) {
-//            System.out.println(allUser);
-//        }
-   //     user.cleanUsersTable();
-     //   user.dropUsersTable();
+        for (User allUser : user.getAllUsers()) {
+            System.out.println(allUser);
+        }
+        user.cleanUsersTable();
+        user.dropUsersTable();
 
 
         // реализуйте алгоритм здесь
