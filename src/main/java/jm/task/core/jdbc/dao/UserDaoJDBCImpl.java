@@ -15,12 +15,8 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
     }
 
     public void createUsersTable() throws SQLException {
-       // String sql = "CREATE TABLE IF NOT EXISTS user (id INT NOT NULL AUTO_INCREMENT, name VARCHAR(45) NOT NULL , lastName VARCHAR(45), age TINYINT(3) NOT NULL)";
-        String sql = "CREATE TABLE `usertest`.`user_table` (\n" +"  `id` INT NOT NULL AUTO_INCREMENT,\n" +                "  `name` VARCHAR(45) NULL,\n" +
-                "  `lastName` VARCHAR(45) NULL,\n" +
-                "  `age` TINYINT(3) NULL,\n" +
-                "  PRIMARY KEY (`id`))";
-        Statement statement = null;
+       String sql = "CREATE TABLE IF NOT EXISTS user (id INT NOT NULL AUTO_INCREMENT, name VARCHAR(45) NOT NULL , lastName VARCHAR(45), age TINYINT(3) NOT NULL, PRIMARY KEY id)";
+       Statement statement = null;
         try {
             statement = connection.createStatement();
             statement.executeUpdate(sql);
