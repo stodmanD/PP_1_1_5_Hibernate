@@ -1,6 +1,7 @@
 package jm.task.core.jdbc.util;
 
 import com.mysql.jdbc.Driver;
+import org.hibernate.SessionFactory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,8 +13,14 @@ public class Util {
     private static final String DB_USERNAME = "stodman";
     private static final String DB_PASSWORD = "stodman";
 
+    private static SessionFactory sessionFactory = null;
 
-    public Connection getConnection () {
+
+
+
+
+
+    public static Connection getConnection() {
         Connection connection = null;
         try {
             Class.forName(DB_Driver);
